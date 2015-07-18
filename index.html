@@ -53,11 +53,11 @@ title: HollowayKeanHo - One Stop Portfolio
 <section class="section" id="contact">
 	<div class="container">
 
-		<h2 class="text-center title">Get in touch</h2>
+		<h2 class="text-center title">Get in Touch</h2>
 
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<p class="lead">Feel free to email me, or drop me a line in Twitter!</p>
+				<p class="lead">Feel free to email me, or drop me a line in my social networks below!</p>
 				<form id="contact-form" action="//formspree.io/hollowaykeanho@gmail.com" method="post">
 					<div class="ajax-hidden">
 						<div class="form-group wow fadeInUp">
@@ -112,7 +112,7 @@ title: HollowayKeanHo - One Stop Portfolio
 
 
 <!-- Third (Works) section -->
-<section class="section" id="themes">
+<section class="section" id="portfolios">
 	<div class="container">
 
 		<h2 class="text-center title">More Themes</h2>
@@ -121,51 +121,31 @@ title: HollowayKeanHo - One Stop Portfolio
 			their photos at <a href="http://unsplash.com">Unsplash</a>, thank you guys!
 		</p>
 		<div class="row">
-			<div class="col-sm-4 col-sm-offset-2">
-				<div class="thumbnail">
-					<img src="assets/screenshots/sshot1.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque doloribus enim vitae nam cupiditate eius at explicabo eaque facere iste.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-				</div>
-			</div>
+			{% for post in site.posts %}
 			<div class="col-sm-4">
-				<div class="thumbnail">
-					<img src="assets/screenshots/sshot4.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque doloribus enim vitae nam cupiditate eius at explicabo eaque facere iste.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+				<a href="#{{ post.section_id }}">
+					<div class="thumbnail">
+						<img src="{{ post.image }}" alt="" />
+						<div class="caption">
+							<h3>{{ post.title }}</h3>
+							<p>{{ post.description }}</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="col-sm-4 col-sm-offset-2">
-				<div class="thumbnail">
-					<img src="assets/screenshots/sshot5.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque doloribus enim vitae nam cupiditate eius at explicabo eaque facere iste.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="thumbnail">
-					<img src="assets/screenshots/sshot3.jpg" alt="">
-					<div class="caption">
-						<h3>Thumbnail label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque doloribus enim vitae nam cupiditate eius at explicabo eaque facere iste.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-				</div>
-			</div>
-
+			{% endfor %}
 		</div>
 
 	</div>
 </section>
 
 
-
+{% for post in site.posts %}
+	<section class="section" id="{{ post.section_id }}">
+		<div class="container">
+			<h2 class="text-center title">{{ post.title }}</h2>
+			<p class="lead text-center">{{ post.description }}</p>
+			<div>{{ post.content }}</div>
+		</div>
+	</section>
+{% endfor %}

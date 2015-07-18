@@ -8,10 +8,12 @@
 					<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 						<li><a href="#head" class="active">Hello</a></li>
-						<li><a href="#about">About me</a></li>
-						<li><a href="#contact">Get in touch</a></li>
+						<li><a href="#about">About My Expertise</a></li>
+						<li><a href="#contact">Get in Touch</a></li>
 						<li><hr></li>
-						<li><a href="#themes">Themes</a></li>
+						{% for post in site.posts %}
+							<li><a href="#{{ post.section_id }}">{{ post.title }}</a></li>
+						{% endfor %}
 
 					</ul>
 				</div>

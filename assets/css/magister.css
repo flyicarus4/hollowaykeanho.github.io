@@ -1,5 +1,5 @@
 html {
-	background:#505D6E url(https://lh3.googleusercontent.com/0NFSchQ2SLwP37amhM_Pcb0BysmwMadgNqiLNwvyUi3-=w1280-h850-no) no-repeat center center fixed;
+	background:#505D6E url(https://lh3.googleusercontent.com/4D-VuGvtrzT-5KbZKvKuEA_owbFpZeqQGMpLsBc7uVuW=w1398-h926-no) no-repeat center center fixed;
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -31,7 +31,7 @@ body {
 
 .navbar-toggle {
 	position:relative;
-	float:left;
+	float:right;
 	display:block;
 	padding: 9px 10px;
 	background: rgba(255, 255, 255, 0.2);
@@ -46,7 +46,7 @@ body {
 	-webkit-transition: all .45s;
 	   -moz-transition: all .45s;
 	        transition: all .45s;
-	        float: left;
+	        float: right;
 }
 .navbar-toggle .icon-bar {
   display: block;
@@ -63,7 +63,8 @@ body {
 }
 .mainmenu .dropdown-menu {
 	top: -14em;
-	left: 0px;
+	left: 0;
+	right: 0;
 	font-size: 13px;
 	padding:0;
 	background:none;
@@ -267,6 +268,15 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 
 
 
+
+
+
+
+
+
+
+
+
 /***********************************************************/
 /*                   Inverted theme                        */
 /***********************************************************/
@@ -276,6 +286,9 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
  }
 .theme-invert a {
 	color:#000;
+}
+.theme-invert hr {
+	border-color: #000;
 }
 .theme-invert .btn {
 	color:rgba(255,255,255,.8);
@@ -293,16 +306,21 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	background: rgba(0, 0, 0, 0.12);
 }
 .theme-invert .navbar-toggle .icon-bar {
-  background: #333;
+	background: #333;
+}
+.theme-invert .mainmenu .dropdown-menu {
+	background: rgba(0, 0, 0, 0.77);
 }
 .theme-invert .mainmenu .dropdown-menu a {
-	color:#000;
+	color:#FFF;
 }
 .theme-invert .mainmenu .dropdown-menu a:hover {
 	background:rgba(0,0,0,.1);
-	color:#000;
+	color:#FFF;
 }
-
+.theme-invert .mainmenu .dropdown-menu hr {
+	border-color: #FFF;
+}
 .theme-invert .title,
 .theme-invert .subtitle,
 .theme-invert .tagline {
