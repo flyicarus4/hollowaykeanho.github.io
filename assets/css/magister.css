@@ -291,7 +291,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	border-color: #000;
 }
 .theme-invert .btn {
-	color:rgba(255,255,255,.8);
+	color:rgba(0,0,0,.8);
 }
 .theme-invert .btn:hover {
 	color:#fff;
