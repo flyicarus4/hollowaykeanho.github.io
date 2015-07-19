@@ -1,0 +1,118 @@
+.donut {
+    position: relative;
+    float: left;
+}
+
+.donut h2 {
+    text-align:center;
+    position: absolute;
+    font-size: 20px;
+    line-height: 125px;
+    width: 100%;
+}
+
+svg {
+   -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+  stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 440;
+}
+
+
+.donut-1-1 .circle_animation {
+    -webkit-animation: donut-1-1 1s ease-out forwards;
+    animation: donut-1-1 1s ease-out forwards;
+}
+@-webkit-keyframes donut-1-1 {
+  to {
+    stroke-dashoffset: 80; /* 50% would be 220 (half the initial value specified above) */
+  }
+}
+@keyframes donut-1-1 {
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+
+.donut-1-2 .circle_animation {
+    -webkit-animation: donut-1-2 1s ease-out forwards;
+    animation: donut-1-2 1s ease-out forwards;
+}
+@-webkit-keyframes donut-1-2 {
+  to {
+    stroke-dashoffset: 120;
+  }
+}
+@keyframes donut-1-2 {
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+
+.donut-2-1 .circle_animation {
+    -webkit-animation: donut-2-1 1s ease-out forwards;
+    animation: donut-2-1 1s ease-out forwards;
+}
+@-webkit-keyframes donut-2-1 {
+  to {
+    stroke-dashoffset: 40;
+  }
+}
+@keyframes donut-2-1 {
+  to {
+    stroke-dashoffset: 40;
+  }
+}
+
+
+.donut-2-2 .circle_animation {
+    -webkit-animation: donut-2-2 1s ease-out forwards;
+    animation: donut-2-2 1s ease-out forwards;
+}
+@-webkit-keyframes donut-2-2 {
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+@keyframes donut-2-2 {
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+
+.donut-2-3 .circle_animation {
+    -webkit-animation: donut-2-3 1s ease-out forwards;
+    animation: donut-2-3 1s ease-out forwards;
+}
+@-webkit-keyframes donut-2-3 {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes donut-2-3 {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+
+.donut-2-4 .circle_animation {
+    -webkit-animation: donut-2-4 1s ease-out forwards;
+    animation: donut-2-4 1s ease-out forwards;
+}
+@-webkit-keyframes donut-2-4 {
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+@keyframes donut-2-4 {
+  to {
+    stroke-dashoffset: 160;
+  }
+}
