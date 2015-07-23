@@ -1,25 +1,21 @@
 <header class="header">
-
 	<div class="wrapper">
 		<nav class="mainmenu">
 			<div class="container">
 				<div class="dropdown">
 					<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-					<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 						<li><a href="#head" class="active">Hello</a></li>
 						<li><a href="#about">About My Expertise</a></li>
+						<li><a href="#publish">Published Documents</a></li>
 						<li><a href="#contact">Get in Touch</a></li>
 						<li><hr></li>
 						{% for post in site.posts %}
 							<li><a href="#{{ post.section_id }}">{{ post.title }}</a></li>
 						{% endfor %}
-
 					</ul>
 				</div>
 			</div>
 		</nav>
-
 	</div>
-
 </header>

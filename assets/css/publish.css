@@ -1,0 +1,17 @@
+.publish-button {
+	max-height: 250px;
+	background-color: #061639;
+	padding: 20px;
+	-webkit-border-radius:	12px;
+	-moz-border-radius:		12px;
+	border-radius:			12px;
+}
+.publish-button img {
+	width: 130px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.publish-button h3 {
+	text-align: center;
+	color: #FFF !important;
+}
