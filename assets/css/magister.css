@@ -47,12 +47,10 @@ body {
 	   -moz-transition: all .45s;
 	        transition: all .45s;
 	        float: right;
+	z-index: 999999;
 }
-.navbar-toggle .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
+.navbar-toggle ul a {
+	display: none;
 }
 .navbar-toggle .icon-bar + .icon-bar {
 	margin-top: 4px;
@@ -72,11 +70,14 @@ body {
 	border-radius: 2px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	display:block;
+	display: block;
 	opacity:0;
 	-webkit-transition: all .45s;
 	   -moz-transition: all .45s;
 	        transition: all .45s;
+}
+.mainmenu .dropdown-menu a {
+	display: none
 }
 .mainmenu .dropdown-menu .active {
 	font-weight:bold;
@@ -84,8 +85,10 @@ body {
 .mainmenu .open .dropdown-menu {
 	top:2px;
 	opacity:1;
+
 }
-.mainmenu .dropdown-menu a {
+.mainmenu .open .dropdown-menu  a {
+	display: block;
 	padding:10px 10px;
 	margin:0;
 	color:white;
